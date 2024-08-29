@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscilloscope</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js" defer></script>
+    <script type="module" src="oscilloscope.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Oscilloscope</h1>
+    </header>
+    <div class="container">
+        <aside class="controls">
+            <div class="slider-box">
+                <p class="slider-name" id="freq-name">Frequency: 5 Hz</p>
+                <input type="range" min="0.1" max="10" value="5" step="0.1" class="slider" id="frequency" title="Adjust the frequency of the waveform">
+            </div>
+            <div class="slider-box">
+                <p class="slider-name" id="amp-name">Amplitude: 5 V</p>
+                <input type="range" min="0.1" max="10" value="5" step="0.1" class="slider" id="amplitude" title="Adjust the amplitude of the waveform">
+            </div>
+            <div class="button-box">
+                <p class="button-name" id="func-name">Function: sin</p>
+                <button class="button" id="sin" title="Generate a sine wave">sin</button>
+                <button class="button" id="cos" title="Generate a cosine wave">cos</button>
+                <button class="button" id="tan" title="Generate a tangent wave">tan</button>
+                <button class="button" id="cot" title="Generate a cotangent wave">cot</button>
+                <button class="button" id="square" title="Generate a square wave">square</button>
+            </div>
+        </aside>
+        <main class="view">
+            <canvas class="canvas"></canvas>
+        </main>
+    </div>
+</body>
+
+</html>
